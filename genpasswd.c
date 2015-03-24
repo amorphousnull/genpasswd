@@ -7,9 +7,7 @@ int main(int argc, char* argv[]){
 srand (time(NULL));
 int temp = rand();
 int length = (rand()%15) + 15;
-
 char characters[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*-_=+][}{)(|':;/.,?><~";
-
 temp = rand()%91;
 
 char password[length];
