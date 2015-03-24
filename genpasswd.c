@@ -5,18 +5,16 @@
 int main(int argc, char* argv[]){
 
 srand (time(NULL));
-int temp = rand();
 int length = (rand()%15) + 15;
 char characters[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*-_=+][}{)(|':;/.,?><~";
-temp = rand()%91;
 
-char password[length];
-int j;
+char password[length+1];
+int j, temp;
 for(j = 0; j < length; j++){
-password[j] = characters[temp];
-temp = rand()%91;
+	password[j] = characters[temp];
+	temp = rand()%91;
 }
-
+password[length] = '\0';
 printf("%s\n", password);
 
 return 0;
