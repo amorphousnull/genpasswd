@@ -13,8 +13,8 @@ temp = rand()%91;
 char password[length];
 int j;
 for(j = 0; j < length; j++){
-password[j] = characters[temp];
-temp = rand()%91;
+	password[j] = characters[temp];
+	temp = rand()%91;
 }
 
 printf("%s\n", password);
