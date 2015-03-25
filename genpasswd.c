@@ -12,16 +12,46 @@ int main(int argc, char* argv[]){
 	else{
 		length = (rand()%15) + 15;
 	}
+	char noSpec[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char easySpec[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*();:";
 	char characters[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*-_=+][}{)(|':;/.,?><~";
-
 	char password[length+1];
-	int iter, random;
-	for(iter = 0; iter < length; iter++){
-		password[iter] = characters[random];
-		random = rand()%91;
+	int iter, random;	
+	
+	if(argc > 2){
+		if(strcmp(argv[2], "easy") == 0){
+			for(iter = 0; iter < length; iter++){
+				random = rand()%74;
+				password[iter] = easySpec[random];
+			}
+			password[length] = '\0';
+			printf("%s\n", password);
+		}
+		else if(strcmp(argv[2], "no") == 0){
+			for(iter = 0; iter < length; iter++){
+				random = rand()%62;
+				password[iter] = noSpec[random];
+			}
+			password[length] = '\0';
+			printf("%s\n", password);			
+		}
+		else{
+			for(iter = 0; iter < length; iter++){
+				random = rand()%91;
+				password[iter] = characters[random];
+			}
+			password[length] = '\0';
+			printf("%s\n", password);
+		}
 	}
-	password[length] = '\0';
-	printf("%s\n", password);
+	else{
+			for(iter = 0; iter < length; iter++){
+				random = rand()%91;
+				password[iter] = characters[random];
+			}
+			password[length] = '\0';
+			printf("%s\n", password);
+	}
 
 	return 0;
 }
