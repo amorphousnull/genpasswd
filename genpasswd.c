@@ -4,19 +4,25 @@
 
 int main(int argc, char* argv[]){
 
-srand (time(NULL));
-int length = (rand()%15) + 15;
-char characters[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*-_=+][}{)(|':;/.,?><~";
+	srand (time(NULL));
+	int length;
+	if(argc > 1){
+		length = atoi(argv[1]);
+	}
+	else{
+		length = (rand()%15) + 15;
+	}
+	char characters[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*-_=+][}{)(|':;/.,?><~";
 
-char password[length+1];
-int iter, random;
-for(iter = 0; iter < length; iter++){
-	password[iter] = characters[random];
-	random = rand()%91;
-}
-password[length] = '\0';
-printf("%s\n", password);
+	char password[length+1];
+	int iter, random;
+	for(iter = 0; iter < length; iter++){
+		password[iter] = characters[random];
+		random = rand()%91;
+	}
+	password[length] = '\0';
+	printf("%s\n", password);
 
-return 0;
+	return 0;
 }
 	
