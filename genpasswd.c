@@ -9,10 +9,10 @@ int length = (rand()%15) + 15;
 char characters[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*-_=+][}{)(|':;/.,?><~";
 
 char password[length+1];
-int iter, rand;
+int iter, random;
 for(iter = 0; iter < length; iter++){
-	password[iter] = characters[rand];
-	rand = rand()%91;
+	password[iter] = characters[random];
+	random = rand()%91;
 }
 password[length] = '\0';
 printf("%s\n", password);
