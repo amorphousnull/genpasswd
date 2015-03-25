@@ -12,21 +12,21 @@ output: ]=Pzn<Vvvm^/]:2
 
 To generate a string of chosen length:
 
-./gen 100
+./gen 50
 
-output: &5JDLXkb}^f9?tK9!Mw;K5]o96R=fjV;(b.z-e9U:os)S]P(v;_E>hsYn'F297.P+|,Q35_M;!~9JO>E5vH2N_!zZ%ByB,MjCIy4
+output: vSC&m0tmoc82rN.%oH,itk.g+1U7|J/k!.Q.N:-+U)C/0wmoCh
 
 To generate a string consisting of no special characters:
 
-./gen 100 no
+./gen 50 no
 
-output: PXySoA6yVtq7QsVClJrh3KBCCMubtcki9S8xqc3jGrquTj4c3ut6e2HRPb0iniyw8H1yT3RxufZmy4yzw2GK2nzRwz9SRGmXnove
+output: cjE1qYzGf1ZZzeDBpkEfe3oEZqkmCYXNhzOIxloKllHSyitXC5
 
 To generate a string consisting of only easily accessible special characters:
 
-./gen 100 easy
+./gen 50 easy
 
-output: #vrl:8Vs;uaX2Y5H9jURP)oShoQAsLg(5HhUQQ!O9OdbB(wogfT^cVM77qHzPY9y7q&XVVd%xqTMnd:h6Sa)CA4nEqBi#Ku)Ppzy
+output: ItvYSl*AVFJU#7:)SoQ9gFypj#hDsJc;1mAxH9*4OiDE3Cgz!&
 
 Note that you must currently input a length in order to choose different character lists.
 
