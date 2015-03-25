@@ -20,5 +20,5 @@ To generate a string consisting of only easily accessible special characters:
 
 ./gen 100 easy
 
-Note that you must currently input a password length in order to choose different character lists.
+Note that you must currently input a length in order to choose different character lists.
 
